@@ -1,7 +1,25 @@
 aid: admagica-ai
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/admagica-ai.png
 name: AdMagica AI
-description: AdMagica AI is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: AdMagica.ai is an AI-powered creative advertising platform founded in 2023 and headquartered
+  in London, United Kingdom, that helps e-commerce brands, marketers, and creators generate high-performing
+  ad creatives and manage campaigns at scale. Its "AI marketing agents" automate ad-creative generation,
+  campaign management, and multi-channel publishing to networks such as Meta, Google, LinkedIn, and
+  Instagram, replacing expensive agency and design workflows with template-driven, product-specific ad
+  production. The platform is an end-user marketing SaaS; it currently publishes no public developer
+  API, OpenAPI, or developer documentation. This profile was surfaced as a portfolio company of 500
+  Global and enriched from the company's public website.
 url: https://raw.githubusercontent.com/api-evangelist/admagica-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -14,6 +32,12 @@ created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
+- Advertising
+- Marketing
+- Artificial Intelligence
+- Creative
+- AdTech
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +45,22 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/admagica-ai-domain-security.yml
 - type: Website
   url: https://admagica.ai
+- type: Pricing
+  url: https://admagica.ai/pricing
+- type: Blog
+  url: https://admagica.ai/blogs
+- type: SignUp
+  url: https://admagica.ai/register
+- type: TermsOfService
+  url: https://admagica.ai/terms
+- type: PrivacyPolicy
+  url: https://admagica.ai/privacy
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
