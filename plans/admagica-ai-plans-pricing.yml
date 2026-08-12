@@ -1,0 +1,831 @@
+generated: '2026-08-12'
+method: probed
+source: https://api.admagica.ai/api/payments/bundled-plans
+sources:
+- url: https://api.admagica.ai/api/payments/bundled-plans
+  status: 200
+  note: anonymous JSON catalog the /pricing page renders client-side; 36 plan/price rows
+- url: https://api.admagica.ai/api/payments/plans
+  status: 200
+  note: anonymous JSON catalog of promotional offers plus annual business rows; 10 rows
+- url: https://admagica.ai/pricing
+  status: 200
+  note: human pricing page; ships "Loading plans..." in the HTML and fetches the tiers client-side from the two
+    endpoints above
+- url: https://api.admagica.ai/api/payments/plans-with-trial
+  status: 401
+  note: trial-aware plan list requires authentication
+currency: USD
+billing_model: subscription with a monthly credit allotment; credit rollover is listed as a Pro/Business feature
+plan_count: 37
+offer_count: 10
+free_trial:
+  days: 7
+  source: https://admagica.ai/pricing
+note: 'AdMagica publishes no developer or API pricing - these are end-user SaaS plans for the marketing application.
+  The tier ladder never appears in the server-rendered /pricing HTML, but the underlying catalog is served anonymously
+  as JSON by the application backend, so it is captured here verbatim as probed data. Amounts are whole US dollars
+  exactly as published by the endpoint (Pro 1 = 30/month, 288/year). Two ladders exist: nine Pro tiers and nine
+  Business tiers, each in monthly and annual form.'
+plans:
+- name: Free
+  plan_type: free
+  price: 0
+  currency: USD
+  period: month
+  included_credits: null
+  limits:
+    brands: 1
+    products: 1
+  trial:
+    days: 7
+    note: '"Try our platform for free for 7 days" (pricing page)'
+  source: https://admagica.ai/pricing
+  note: Pricing page states the free plan includes "one brand and one product"; credit allotment not stated. Not
+    present in the machine-readable catalog.
+- name: Pro 1
+  plan_type: pro
+  price: 288
+  currency: USD
+  period: year
+  included_credits: 200
+  credit_period: month
+  product_id: prod_TtYJCSc1bPKF2j
+  price_id: price_1SvlDLCXuYfWK8E4EJigxs3z
+  description: Pro 1 - pro plan with 200 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 200 credits included monthly
+- name: Pro 1
+  plan_type: pro
+  price: 30
+  currency: USD
+  period: month
+  included_credits: 200
+  credit_period: month
+  product_id: prod_TtYJuunT4kpy0D
+  price_id: price_1SvlD5CXuYfWK8E4qkhyQbG9
+  description: Pro 1 - pro plan with 200 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 200 credits included monthly
+- name: Pro 2
+  plan_type: pro
+  price: 528
+  currency: USD
+  period: year
+  included_credits: 400
+  credit_period: month
+  product_id: prod_TtYJwYwQRl6pMo
+  price_id: price_1SvlDMCXuYfWK8E4cNHZBAOf
+  description: Pro 2 - pro plan with 400 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 400 credits included monthly
+- name: Pro 2
+  plan_type: pro
+  price: 55
+  currency: USD
+  period: month
+  included_credits: 400
+  credit_period: month
+  product_id: prod_TtYJmef3c4UJeo
+  price_id: price_1SvlD6CXuYfWK8E46oZvhnf3
+  description: Pro 2 - pro plan with 400 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 400 credits included monthly
+- name: Pro 3
+  plan_type: pro
+  price: 960
+  currency: USD
+  period: year
+  included_credits: 800
+  credit_period: month
+  product_id: prod_TtYK8Qfin7BkCZ
+  price_id: price_1SvlDNCXuYfWK8E4XpkF6VLY
+  description: Pro 3 - pro plan with 800 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 800 credits included monthly
+- name: Pro 3
+  plan_type: pro
+  price: 100
+  currency: USD
+  period: month
+  included_credits: 800
+  credit_period: month
+  product_id: prod_TtYJZaTvP2ujPY
+  price_id: price_1SvlD7CXuYfWK8E4dYLpjPfT
+  description: Pro 3 - pro plan with 800 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 800 credits included monthly
+- name: Pro 4
+  plan_type: pro
+  price: 1344
+  currency: USD
+  period: year
+  included_credits: 1200
+  credit_period: month
+  product_id: prod_TtYKYVyGAD9Tum
+  price_id: price_1SvlDNCXuYfWK8E4ySy7fsk1
+  description: Pro 4 - pro plan with 1200 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 1200 credits included monthly
+- name: Pro 4
+  plan_type: pro
+  price: 140
+  currency: USD
+  period: month
+  included_credits: 1200
+  credit_period: month
+  product_id: prod_TtYJIkfl9qi7h1
+  price_id: price_1SvlD8CXuYfWK8E4TJCaEeix
+  description: Pro 4 - pro plan with 1200 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 1200 credits included monthly
+- name: Pro 5
+  plan_type: pro
+  price: 2112
+  currency: USD
+  period: year
+  included_credits: 2000
+  credit_period: month
+  product_id: prod_TtYKDFIz5uZTdH
+  price_id: price_1SvlDOCXuYfWK8E4MXm0XHh8
+  description: Pro 5 - pro plan with 2000 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 2000 credits included monthly
+- name: Pro 5
+  plan_type: pro
+  price: 220
+  currency: USD
+  period: month
+  included_credits: 2000
+  credit_period: month
+  product_id: prod_TtYJ3Cd96PfJpw
+  price_id: price_1SvlD8CXuYfWK8E4RH107Dwe
+  description: Pro 5 - pro plan with 2000 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 2000 credits included monthly
+- name: Pro 6
+  plan_type: pro
+  price: 2976
+  currency: USD
+  period: year
+  included_credits: 3000
+  credit_period: month
+  product_id: prod_TtYK3Iwkie01Dx
+  price_id: price_1SvlDPCXuYfWK8E4VJAUCmLn
+  description: Pro 6 - pro plan with 3000 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 3000 credits included monthly
+- name: Pro 6
+  plan_type: pro
+  price: 310
+  currency: USD
+  period: month
+  included_credits: 3000
+  credit_period: month
+  product_id: prod_TtYJudtqWtaydg
+  price_id: price_1SvlD9CXuYfWK8E4Hdr8LHR6
+  description: Pro 6 - pro plan with 3000 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 3000 credits included monthly
+- name: Pro 7
+  plan_type: pro
+  price: 4608
+  currency: USD
+  period: year
+  included_credits: 5000
+  credit_period: month
+  product_id: prod_TtYK3SpV9qznqQ
+  price_id: price_1SvlDQCXuYfWK8E4duJWPpmV
+  description: Pro 7 - pro plan with 5000 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 5000 credits included monthly
+- name: Pro 7
+  plan_type: pro
+  price: 480
+  currency: USD
+  period: month
+  included_credits: 5000
+  credit_period: month
+  product_id: prod_TtYJlHwOAW8cuV
+  price_id: price_1SvlDACXuYfWK8E4MXAUpehI
+  description: Pro 7 - pro plan with 5000 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 5000 credits included monthly
+- name: Pro 8
+  plan_type: pro
+  price: 6528
+  currency: USD
+  period: year
+  included_credits: 7500
+  credit_period: month
+  product_id: prod_TtYKzHDsigPnyX
+  price_id: price_1SvlDRCXuYfWK8E4LHSxlzKl
+  description: Pro 8 - pro plan with 7500 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 7500 credits included monthly
+- name: Pro 8
+  plan_type: pro
+  price: 680
+  currency: USD
+  period: month
+  included_credits: 7500
+  credit_period: month
+  product_id: prod_TtYJbjLFpF2A2e
+  price_id: price_1SvlDBCXuYfWK8E44kWTc0Vo
+  description: Pro 8 - pro plan with 7500 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 7500 credits included monthly
+- name: Pro 9
+  plan_type: pro
+  price: 8160
+  currency: USD
+  period: year
+  included_credits: 10000
+  credit_period: month
+  product_id: prod_TtYKl5PwcVVsAc
+  price_id: price_1SvlDSCXuYfWK8E4nbtzFMpC
+  description: Pro 9 - pro plan with 10000 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 10000 credits included monthly
+- name: Pro 9
+  plan_type: pro
+  price: 850
+  currency: USD
+  period: month
+  included_credits: 10000
+  credit_period: month
+  product_id: prod_TtYJ6NccLdp4fJ
+  price_id: price_1SvlDCCXuYfWK8E4lIPRuOYm
+  description: Pro 9 - pro plan with 10000 credits per month
+  features:
+  - Credit rollovers
+  - Manage up to 3 brands
+  - 10 products per brand
+  - Access to core templates
+  - Standard export quality
+  - All AI image generation tools
+  - HD image downloads
+  - Priority support
+  - 10000 credits included monthly
+- name: Business 1
+  plan_type: business
+  price: 480
+  currency: USD
+  period: year
+  included_credits: 200
+  credit_period: month
+  product_id: prod_TtYKTHEzYiCaQD
+  price_id: price_1SvlDTCXuYfWK8E4UqAGk1Rh
+  description: Business 1 - business plan with 200 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 200 credits included monthly
+- name: Business 1
+  plan_type: business
+  price: 50
+  currency: USD
+  period: month
+  included_credits: 200
+  credit_period: month
+  product_id: prod_TtYJH5ynJ1604t
+  price_id: price_1SvlDDCXuYfWK8E4VkeLfei3
+  description: Business 1 - business plan with 200 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 200 credits included monthly
+- name: Business 2
+  plan_type: business
+  price: 864
+  currency: USD
+  period: year
+  included_credits: 400
+  credit_period: month
+  product_id: prod_TtYKTXFzMsXfcu
+  price_id: price_1SvlDUCXuYfWK8E42PvdUjKg
+  description: Business 2 - business plan with 400 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 400 credits included monthly
+- name: Business 2
+  plan_type: business
+  price: 90
+  currency: USD
+  period: month
+  included_credits: 400
+  credit_period: month
+  product_id: prod_TtYJD9B0VFqPZ5
+  price_id: price_1SvlDECXuYfWK8E48gFgaYGr
+  description: Business 2 - business plan with 400 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 400 credits included monthly
+- name: Business 3
+  plan_type: business
+  price: 1536
+  currency: USD
+  period: year
+  included_credits: 800
+  credit_period: month
+  product_id: prod_TtYKvb8Uv8P1Rw
+  price_id: price_1SvlDUCXuYfWK8E4XPOb8uIT
+  description: Business 3 - business plan with 800 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 800 credits included monthly
+- name: Business 3
+  plan_type: business
+  price: 160
+  currency: USD
+  period: month
+  included_credits: 800
+  credit_period: month
+  product_id: prod_TtYJMO1uFC0b2T
+  price_id: price_1SvlDFCXuYfWK8E4Nzj7y9qb
+  description: Business 3 - business plan with 800 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 800 credits included monthly
+- name: Business 4
+  plan_type: business
+  price: 2112
+  currency: USD
+  period: year
+  included_credits: 1200
+  credit_period: month
+  product_id: prod_TtYK21u5xRJGSk
+  price_id: price_1SvlDVCXuYfWK8E4vfesAezV
+  description: Business 4 - business plan with 1200 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 1200 credits included monthly
+- name: Business 4
+  plan_type: business
+  price: 220
+  currency: USD
+  period: month
+  included_credits: 1200
+  credit_period: month
+  product_id: prod_TtYJ24tsd8YdCQ
+  price_id: price_1SvlDGCXuYfWK8E4SQKMryeK
+  description: Business 4 - business plan with 1200 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 1200 credits included monthly
+- name: Business 5
+  plan_type: business
+  price: 3360
+  currency: USD
+  period: year
+  included_credits: 2000
+  credit_period: month
+  product_id: prod_TtYKJOeKNj48Yp
+  price_id: price_1SvlDWCXuYfWK8E41lB0xDYj
+  description: Business 5 - business plan with 2000 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 2000 credits included monthly
+- name: Business 5
+  plan_type: business
+  price: 350
+  currency: USD
+  period: month
+  included_credits: 2000
+  credit_period: month
+  product_id: prod_TtYJjG4YQHMWMz
+  price_id: price_1SvlDGCXuYfWK8E4cDqhqhYv
+  description: Business 5 - business plan with 2000 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 2000 credits included monthly
+- name: Business 6
+  plan_type: business
+  price: 4800
+  currency: USD
+  period: year
+  included_credits: 3000
+  credit_period: month
+  product_id: prod_TtYKnZomQuXuoc
+  price_id: price_1SvlDXCXuYfWK8E4XDAL933B
+  description: Business 6 - business plan with 3000 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 3000 credits included monthly
+- name: Business 6
+  plan_type: business
+  price: 500
+  currency: USD
+  period: month
+  included_credits: 3000
+  credit_period: month
+  product_id: prod_TtYJ3t2yDTrOaf
+  price_id: price_1SvlDHCXuYfWK8E4OnkbE0b2
+  description: Business 6 - business plan with 3000 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 3000 credits included monthly
+- name: Business 7
+  plan_type: business
+  price: 7488
+  currency: USD
+  period: year
+  included_credits: 5000
+  credit_period: month
+  product_id: prod_TtYK1UurwlyH23
+  price_id: price_1SvlDYCXuYfWK8E4Wc46b2GF
+  description: Business 7 - business plan with 5000 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 5000 credits included monthly
+- name: Business 7
+  plan_type: business
+  price: 780
+  currency: USD
+  period: month
+  included_credits: 5000
+  credit_period: month
+  product_id: prod_TtYJuc8W1xby0n
+  price_id: price_1SvlDICXuYfWK8E4ywAe402X
+  description: Business 7 - business plan with 5000 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 5000 credits included monthly
+- name: Business 8
+  plan_type: business
+  price: 10560
+  currency: USD
+  period: year
+  included_credits: 7500
+  credit_period: month
+  product_id: prod_TtYKTiphgFBhNC
+  price_id: price_1SvlDZCXuYfWK8E4tmTqt6aN
+  description: Business 8 - business plan with 7500 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 7500 credits included monthly
+- name: Business 8
+  plan_type: business
+  price: 1100
+  currency: USD
+  period: month
+  included_credits: 7500
+  credit_period: month
+  product_id: prod_TtYJbGbtlAY704
+  price_id: price_1SvlDJCXuYfWK8E4fwbZfIfB
+  description: Business 8 - business plan with 7500 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 7500 credits included monthly
+- name: Business 9
+  plan_type: business
+  price: 13440
+  currency: USD
+  period: year
+  included_credits: 10000
+  credit_period: month
+  product_id: prod_TtYKIpNeQswiEi
+  price_id: price_1SvlDaCXuYfWK8E4A04kUCog
+  description: Business 9 - business plan with 10000 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 10000 credits included monthly
+- name: Business 9
+  plan_type: business
+  price: 1400
+  currency: USD
+  period: month
+  included_credits: 10000
+  credit_period: month
+  product_id: prod_TtYJRFdCrWlTRH
+  price_id: price_1SvlDKCXuYfWK8E4vUvoEUI0
+  description: Business 9 - business plan with 10000 credits per month
+  features:
+  - All Pro features
+  - Manage up to 10 brands
+  - Team collaboration
+  - 4K image generation
+  - Advanced AI models
+  - Priority support
+  - 10000 credits included monthly
+offers:
+- name: Scale Offer for Enterprise Marketing Teams
+  plan_type: enterprise
+  price: 1500
+  currency: USD
+  period: month
+  product_id: prod_UtLFb1ELsQtofo
+  price_id: price_1TtYZ4CXuYfWK8E4yEfUohKN
+  description: Scale Offer for Enterprise Marketing Teams. Unlimited Nano Banana Pro, Priority queue for Seedance
+    2.0 and 15,000 Credit.
+  trial_eligible: false
+  trial_days: 0
+- name: 1$ Unlimited Offer
+  plan_type: free
+  price: 365
+  currency: USD
+  period: year
+  product_id: prod_UrIf7uG7n6wvcv
+  price_id: price_1Tra41CXuYfWK8E4pdW84kwS
+  description: Unlimited Nano Banana and Seedance 2.0 OFFER
+  trial_eligible: false
+  trial_days: 0
+- name: Unlimited Offer
+  plan_type: free
+  price: 399
+  currency: USD
+  period: year
+  product_id: prod_Up6iAcAo9dE5iT
+  price_id: price_1TpSVVCXuYfWK8E4tlC56V5u
+  description: Unlimited Nano Banana and Seedance 2
+  trial_eligible: false
+  trial_days: 0
+- name: Business 9
+  plan_type: business
+  price: 13440
+  currency: USD
+  period: year
+  product_id: prod_TtYKIpNeQswiEi
+  price_id: price_1SvlDaCXuYfWK8E4A04kUCog
+  description: Business 9 - business plan with 10000 credits per month
+  trial_eligible: false
+  trial_days: 0
+- name: Business 8
+  plan_type: business
+  price: 10560
+  currency: USD
+  period: year
+  product_id: prod_TtYKTiphgFBhNC
+  price_id: price_1SvlDZCXuYfWK8E4tmTqt6aN
+  description: Business 8 - business plan with 7500 credits per month
+  trial_eligible: false
+  trial_days: 0
+- name: Business 7
+  plan_type: business
+  price: 7488
+  currency: USD
+  period: year
+  product_id: prod_TtYK1UurwlyH23
+  price_id: price_1SvlDYCXuYfWK8E4Wc46b2GF
+  description: Business 7 - business plan with 5000 credits per month
+  trial_eligible: false
+  trial_days: 0
+- name: Business 6
+  plan_type: business
+  price: 4800
+  currency: USD
+  period: year
+  product_id: prod_TtYKnZomQuXuoc
+  price_id: price_1SvlDXCXuYfWK8E4XDAL933B
+  description: Business 6 - business plan with 3000 credits per month
+  trial_eligible: false
+  trial_days: 0
+- name: Business 5
+  plan_type: business
+  price: 3360
+  currency: USD
+  period: year
+  product_id: prod_TtYKJOeKNj48Yp
+  price_id: price_1SvlDWCXuYfWK8E41lB0xDYj
+  description: Business 5 - business plan with 2000 credits per month
+  trial_eligible: false
+  trial_days: 0
+- name: Business 4
+  plan_type: business
+  price: 2112
+  currency: USD
+  period: year
+  product_id: prod_TtYK21u5xRJGSk
+  price_id: price_1SvlDVCXuYfWK8E4vfesAezV
+  description: Business 4 - business plan with 1200 credits per month
+  trial_eligible: false
+  trial_days: 0
+- name: Business 3
+  plan_type: business
+  price: 1536
+  currency: USD
+  period: year
+  product_id: prod_TtYKvb8Uv8P1Rw
+  price_id: price_1SvlDUCXuYfWK8E4XPOb8uIT
+  description: Business 3 - business plan with 800 credits per month
+  trial_eligible: false
+  trial_days: 0

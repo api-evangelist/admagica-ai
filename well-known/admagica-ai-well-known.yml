@@ -1,0 +1,84 @@
+generated: '2026-08-12'
+method: probed
+source: live GET of the RFC 8615 discovery surface on every host AdMagica AI operates
+note: >-
+  Every well-known path was probed on both hosts and every one missed. No WellKnown, SecurityTxt or
+  AgentCard pointer is emitted from this file - a recorded absence is data, not a served surface. The
+  marketing host answers unmatched paths two different ways: some return a real HTTP 404, others return
+  HTTP 200 carrying the same 70,604-byte Next.js client-rendered 404 shell. Both are misses; the 200s are
+  soft-404s and are marked as such below so a later pass does not read them as documents.
+hosts:
+- host: https://admagica.ai
+  kind: marketing site (Next.js on Railway, fronted by Cloudflare)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://api.admagica.ai
+  kind: application backend (Express/NestJS on Railway) - the host the web app calls; not a published developer API
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+soft_404s:
+- url: https://admagica.ai/docs
+  status: 200
+  bytes: 70604
+  verdict: soft-404 - Next.js 404 shell, not a documentation page
+- url: https://admagica.ai/redoc
+  status: 200
+  bytes: 70604
+  verdict: soft-404
+- url: https://admagica.ai/mcp
+  status: 200
+  bytes: 70604
+  verdict: soft-404 - no MCP server
+- url: https://admagica.ai/status
+  status: 200
+  bytes: 70604
+  verdict: soft-404 - no status page
+- url: https://admagica.ai/changelog
+  status: 200
+  bytes: 70604
+  verdict: soft-404 - no changelog
+- url: https://admagica.ai/security
+  status: 200
+  bytes: 70604
+  verdict: soft-404 - no security page
+- url: https://admagica.ai/trust
+  status: 200
+  bytes: 70604
+  verdict: soft-404 - no trust center
+- url: https://admagica.ai/support
+  status: 200
+  bytes: 70604
+  verdict: soft-404 - no support page
+- url: https://admagica.ai/roadmap
+  status: 200
+  bytes: 70604
+  verdict: soft-404 - no roadmap
+found: []

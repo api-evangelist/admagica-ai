@@ -1,0 +1,38 @@
+generated: '2026-08-12'
+method: probed
+source: response headers observed on live anonymous GETs plus a search of every public AdMagica AI page
+limit_count: 0
+note: >-
+  AdMagica AI publishes no rate limits, because it publishes no developer API. There is no developer
+  portal, no API reference and no terms-of-service section that states a quota. The one machine-readable
+  surface that answers anonymously - the application backend at api.admagica.ai - returns no rate-limit
+  headers of any kind on a 200, so there is no runtime signal an agent could read either. Consumption on
+  the product side is metered in CREDITS per month rather than requests per window; that ladder is captured
+  in plans/admagica-ai-plans-pricing.yml, not here, because credits are a billing quota and not an API rate
+  limit.
+limits: []
+response_headers:
+  observed: []
+  checked:
+  - X-RateLimit-Limit
+  - X-RateLimit-Remaining
+  - X-RateLimit-Reset
+  - RateLimit-Limit
+  - RateLimit-Remaining
+  - RateLimit-Reset
+  - RateLimit-Policy
+  - Retry-After
+  note: >-
+    None present. The 200 response carries only date, content-type, etag, vary, x-powered-by (Express),
+    Railway routing headers and Cloudflare edge headers.
+exhaustion_status_code: null
+evidence:
+- url: https://api.admagica.ai/api/payments/plans
+  status: 200
+  note: anonymous JSON; no rate-limit headers on the response
+- url: https://admagica.ai/
+  status: 200
+  note: anonymous HTML; no rate-limit headers on the response
+- url: https://admagica.ai/terms
+  status: 200
+  note: terms of service; no API usage limits stated

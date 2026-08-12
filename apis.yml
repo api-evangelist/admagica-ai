@@ -1,15 +1,22 @@
 aid: admagica-ai
 accessModel:
-  pricing: unknown
-  onboarding: unknown
-  trial: false
-  try_now: false
+  pricing: freemium
+  onboarding: self-serve
+  trial: true
+  try_now: true
   public: false
-  label: Unknown
-  confidence: low
-  source: []
-  generated: '2026-07-22'
-  method: derived
+  label: Freemium (free trial) · Self-serve signup
+  confidence: medium
+  source:
+  - https://admagica.ai/pricing
+  - https://admagica.ai/register
+  - https://api.admagica.ai/api/payments/bundled-plans
+  note: >-
+    Product access is freemium and self-serve (free plan with one brand and one product, 7-day free
+    trial, then Pro/Business credit tiers). API access remains public:false — AdMagica AI publishes no
+    developer API.
+  generated: '2026-08-12'
+  method: probed
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/admagica-ai.png
 name: AdMagica AI
 description: AdMagica.ai is an AI-powered creative advertising platform founded in 2023 and headquartered
@@ -29,7 +36,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-08-12'
 tags:
 - Company
 - Advertising
@@ -59,8 +66,39 @@ common:
   url: https://admagica.ai/terms
 - type: PrivacyPolicy
   url: https://admagica.ai/privacy
+- type: GitHubOrganization
+  url: https://github.com/AdMagica
+- type: Plans
+  url: plans/admagica-ai-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/admagica-ai-rate-limits.yml
+- type: LLMsTxt
+  url: llms/admagica-ai-llms.txt
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 4
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AdMagica AI ships an end-user marketing SaaS with no developer program at all — the sitemap lists
+    only marketing, blog, case-study and signup routes, /docs and /redoc return the site's 200-with-404
+    Next.js shell, and the one live backend host (api.admagica.ai) is disallowed to crawlers in
+    robots.txt, serves no OpenAPI at any conventional path, and answers 401 Authentication required on
+    every non-pricing route.
+  evidence:
+  - url: https://api.admagica.ai/openapi.json
+    status: 404
+  - url: https://api.admagica.ai/api/docs
+    status: 404
+  - url: https://admagica.ai/docs
+    status: 200
+  - url: https://admagica.ai/llms.txt
+    status: 404
+  - url: https://admagica.ai/.well-known/agent-card.json
+    status: 404
+  - url: https://api.admagica.ai/api/credits/trial-status
+    status: 401
+  checked: '2026-08-12'
