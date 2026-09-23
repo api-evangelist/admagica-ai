@@ -1,12 +1,17 @@
-generated: '2026-08-12'
+generated: '2026-09-19'
 method: probed
 source: live GET of the RFC 8615 discovery surface on every host AdMagica AI operates
-note: >-
-  Every well-known path was probed on both hosts and every one missed. No WellKnown, SecurityTxt or
-  AgentCard pointer is emitted from this file - a recorded absence is data, not a served surface. The
+note: 'Every well-known path was probed on both hosts and every one missed. No WellKnown, SecurityTxt
+  or AgentCard pointer is emitted from this file - a recorded absence is data, not a served surface. The
   marketing host answers unmatched paths two different ways: some return a real HTTP 404, others return
-  HTTP 200 carrying the same 70,604-byte Next.js client-rendered 404 shell. Both are misses; the 200s are
-  soft-404s and are marked as such below so a later pass does not read them as documents.
+  HTTP 200 carrying the same 70,604-byte Next.js client-rendered 404 shell. Both are misses; the 200s
+  are soft-404s and are marked as such below so a later pass does not read them as documents.
+
+
+  MCP-host OAuth discovery added 2026-09-19 (roadmap#321/#337): the harvest visits a provider''s primary
+  hosts, and RFC 9728 protected-resource metadata lives on the MCP host, so these documents existed and
+  were invisible to the scorer. Fetched live and validated on `resource`/`issuer`; one negative control
+  per host.'
 hosts:
 - host: https://admagica.ai
   kind: marketing site (Next.js on Railway, fronted by Cloudflare)
@@ -26,7 +31,8 @@ hosts:
   - path: /.well-known/agent.json
     status: 404
 - host: https://api.admagica.ai
-  kind: application backend (Express/NestJS on Railway) - the host the web app calls; not a published developer API
+  kind: application backend (Express/NestJS on Railway) - the host the web app calls; not a published
+    developer API
   documents:
   - path: /.well-known/security.txt
     status: 404
@@ -44,6 +50,18 @@ hosts:
     status: 404
   - path: /.well-known/agent.json
     status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: admagica-ai-api-oauth-authorization-server.json
+    bytes: 721
+  path_echo_control: passed
+- host: https://mcp.admagica.ai
+  documents:
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: admagica-ai-mcp-oauth-protected-resource.json
+    bytes: 169
+  path_echo_control: passed
 soft_404s:
 - url: https://admagica.ai/docs
   status: 200
