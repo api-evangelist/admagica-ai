@@ -64,6 +64,105 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AdMagica AI is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+AdMagica.ai is an AI-powered creative advertising platform founded in 2023 and headquartered in London, United Kingdom, that helps e-commerce brands, marketers, and creators generate high-performing ad creatives and manage campaigns at scale. Its "AI marketing agents" automate ad-creative generation, campaign management, and multi-channel publishing to networks such as Meta, Google, LinkedIn, and Instagram, replacing expensive agency and design workflows with template-driven, product-specific ad production. The platform is an end-user marketing SaaS; it currently publishes no public developer API, OpenAPI, or developer documentation. This profile was surfaced as a portfolio company of 500 Global and enriched from the company's public website.
 
-Backed by: 500-global — https://admagica.ai
+**Areas:** Company · Advertising · Marketing · Artificial Intelligence · Creative · AdTech · Software-as-a-Service
+
+## AdMagica AI on APIs.io
+
+Everything profiled for AdMagica AI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/admagica-ai/](https://apis.io/providers/admagica-ai/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [admagica-ai](https://apis.io/servers/admagica-ai/admagica-ai/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Admagica Ai Domain Security](https://apis.io/security/admagica-ai/admagica-ai-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Admagica Ai Plans Pricing](https://apis.io/plans/admagica-ai/admagica-ai-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Admagica Ai Rate Limits](https://apis.io/rate-limits/admagica-ai/admagica-ai-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://admagica.ai)
+- [Pricing](https://admagica.ai/pricing)
+- [Sign up](https://admagica.ai/register)
+- [Blog](https://admagica.ai/blogs)
+- [Terms of service](https://admagica.ai/terms)
+- [Privacy policy](https://admagica.ai/privacy)
+- [GitHub](https://github.com/AdMagica)
+
+## API Evangelist rating
+
+**Kin Score 19.6** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 51.7 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 65.8 |
+
+**Agent readiness 29.9** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 18.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/admagica-ai/](https://apis.io/providers/admagica-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AdMagica AI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/admagica-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
