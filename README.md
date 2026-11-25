@@ -86,19 +86,19 @@ Model Context Protocol servers that expose the API to agents.
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Admagica Ai Domain Security](https://apis.io/security/admagica-ai/admagica-ai-domain-security/)
+- [AdMagica AI Domain Security](https://apis.io/security/admagica-ai/admagica-ai-domain-security/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [Admagica Ai Plans Pricing](https://apis.io/plans/admagica-ai/admagica-ai-plans-pricing/)
+- [AdMagica AI Plans Pricing](https://apis.io/plans/admagica-ai/admagica-ai-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Admagica Ai Rate Limits](https://apis.io/rate-limits/admagica-ai/admagica-ai-rate-limits/)
+- [AdMagica AI Rate Limits](https://apis.io/rate-limits/admagica-ai/admagica-ai-rate-limits/)
 
 ## Where to find this API
 
@@ -114,18 +114,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 19.6** — emerging · rubric 0.25.0 · scored 2026-10-23
+**Kin Score 20.4** — emerging · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 51.7 |
 | Contract quality | 0.0 |
 | Contract governance | 0.0 |
-| Operational transparency | 2.6 |
+| Operational transparency | 4.8 |
 | Developer ergonomics | 2.4 |
-| Access clarity | 65.8 |
+| Access clarity | 72.3 |
 
-**Agent readiness 29.9** — agent-ready
+**Agent readiness 29.2** — agent-ready
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -150,8 +150,12 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Agentic Commerce | — |
 | Pagination Ratio | na |
 | Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 18.2** — Horizontal (data, software, accessibility, platform)
+**Regulatory alignment 12.7** — Horizontal (data, software, accessibility, platform)
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/admagica-ai/](https://apis.io/providers/admagica-ai/).
 
